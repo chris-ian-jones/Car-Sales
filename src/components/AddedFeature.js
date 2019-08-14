@@ -17,4 +17,4 @@
 //   }
 // }
 
-// export default commect(mapStateToProps, {})(AddedFeature)
+// export default connect(mapStateToProps, {})(AddedFeature)
