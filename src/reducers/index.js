@@ -18,7 +18,11 @@ const initialState = {
 
 export const featuresReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "":
+    case "REMOVE_FEATURE":
+      return {
+      
+      };
+    case "BUY_ITEM":
       return {
       
       };
