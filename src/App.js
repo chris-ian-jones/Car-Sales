@@ -10,7 +10,7 @@ function App() {
     <div className="boxes">
       <div className="box">
         <Header />
-        {/* <AddedFeatures /> */}
+        <AddedFeatures />
       </div>
       <div className="box">
         <AdditionalFeatures />
