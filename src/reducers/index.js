@@ -25,7 +25,8 @@ export const featuresReducer = (state = initialState, action) => {
           name: state.car.name,
           image: state.car.image,
           features: state.car.features.filter(feature => feature !== action.payload)
-        }
+        },
+        store: [...state.store, action.payload]
       }
     case "ADD_FEATURE":
       return {
@@ -35,7 +36,8 @@ export const featuresReducer = (state = initialState, action) => {
           name: state.car.name,
           image: state.car.image,
           features: [...state.car.features, action.payload]
-        }
+        },
+        store: state.store.filter(feature => feature !== action.payload)
       }
     default:
       return state
