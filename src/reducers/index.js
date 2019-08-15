@@ -1,4 +1,3 @@
-
 const initialState = {
   additionalPrice: 0,
   car: {
@@ -27,11 +26,7 @@ export const featuresReducer = (state = initialState, action) => {
           image: state.car.image,
           features: state.car.features.filter(feature => feature !== action.payload)
         }
-      };
-    case "BUY_ITEM":
-      return {
-      
-      };
+      }
     case "ADD_FEATURE":
       return {
         ...state,
@@ -41,8 +36,8 @@ export const featuresReducer = (state = initialState, action) => {
           image: state.car.image,
           features: [...state.car.features, action.payload]
         }
-      };
+      }
     default:
-      return state;
+      return state
   }
 }

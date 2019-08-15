@@ -1,19 +1,17 @@
-import React, { useReducer } from 'react';
+import React from 'react';
 import { connect } from 'react-redux'
 
-// import { initialState, featuresReducer } from "../reducers/";
-
-const Header = props => {
+const Header = ({ name, image, price }) => {
   return (
     <>
       <figure className="image is-128x128">
-        <img src={props.image} alt={props.name} />
+        <img src={image} alt={name} />
       </figure>
-      <h2>{props.name}</h2>
-      <p>Amount: ${props.price}</p>
+      <h2>{name}</h2>
+      <p>Amount: ${price}</p>
     </>
-  );
-};
+  )
+}
 
 const mapStateToProps = state => {
   return {
@@ -23,5 +21,7 @@ const mapStateToProps = state => {
   }
 }
 
-
-export default connect(mapStateToProps, {})(Header)
+export default connect(
+  mapStateToProps, 
+  {}
+)(Header)
