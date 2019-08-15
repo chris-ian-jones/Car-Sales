@@ -6,7 +6,7 @@ const initialState = {
     name: '2019 Ford Mustang',
     image:
       'https://cdn.motor1.com/images/mgl/0AN2V/s1/2019-ford-mustang-bullitt.jpg',
-    features: [{ id: 1, name: 'V-6 engine', price: 1500 }, { id: 4, name: 'Rear spoiler', price: 250 }]
+    features: []
   },
   store: [
     { id: 1, name: 'V-6 engine', price: 1500 },
@@ -20,7 +20,13 @@ export const featuresReducer = (state = initialState, action) => {
   switch (action.type) {
     case "REMOVE_FEATURE":
       return {
-      
+        ...state,
+        car: {
+          price: state.car.price,
+          name: state.car.name,
+          image: state.car.image,
+          features: state.car.features.filter(feature => feature !== action.payload)
+        }
       };
     case "BUY_ITEM":
       return {

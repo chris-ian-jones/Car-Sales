@@ -6,6 +6,6 @@ export const buyItem = item => {
   return { type: "BUY_ITEM", payload: item }
 };
 
-export const addNewFeature = item => {
+export const addFeature = item => {
   return { type: "ADD_FEATURE", payload: item }
 }
